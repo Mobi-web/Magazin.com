@@ -2,56 +2,9 @@ body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
+    background-color: #808080;
     line-height: 1.6;
     transition: background-color 0.3s, color 0.3s;
-}
-
-.bottom-nav {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-color: #fff;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.bottom-nav ul {
-    display: flex;
-    justify-content: space-around;
-    padding: 10px 0;
-    margin: 0;
-    list-style: none;
-}
-
-.bottom-nav li {
-    flex: 1;
-    text-align: center;
-}
-
-.nav-button {
-    display: inline-block;
-    width: 50px; /* Ширина кнопки */
-    height: 50px; /* Высота кнопки */
-    background-color: #d2b48c; /* Цвет фона кнопки */
-    color: #fff; /* Цвет текста */
-    border-radius: 50%; /* Круглая форма */
-    line-height: 50px; /* Центрирование текста по вертикали */
-    text-align: center; /* Центрирование текста по горизонтали */
-    font-size: 24px; /* Размер иконки */
-    transition: background-color 0.3s, transform 0.3s; /* Анимация */
-}
-
-.nav-button:hover {
-    background-color: #c2a77a; /* Цвет фона при наведении */
-    transform: scale(1.1); /* Увеличение кнопки при наведении */
-}
-
-footer {
-    text-align: center;
-    padding: 1em;
-    background-color: #d2b48c;
-    color: #000;
 }
 
 body.dark-mode {
@@ -104,14 +57,14 @@ header {
     position: absolute;
     top: 40px;
     left: 8px;
-    background-color: #d2b48c;
+    background-color: #41ca0c;
     border-radius: 4px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     z-index: 1;
 }
 
 .menu-panel button {
-    background-color: #d2b48c;
+    background-color: #32CD32;
     border: 1px solid #ccc;
     color: #000000;
     padding: 0.5em 1em;
@@ -123,7 +76,7 @@ header {
 }
 
 .menu-panel button:hover {
-    background-color: #f0f0f0;
+    background-color: #321aa8;
     transform: scale(1.1);
 }
 
