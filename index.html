@@ -4,110 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Интернет-магазин</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <h1>Zed</h1>
-        <input type="text" id="search-bar" placeholder="🔍Поиск..." oninput="filterProducts()">
-        <button class="menu-button" onclick="toggleMenu()">Меню</button>
-        <div class="menu-panel" id="menu-panel">
-            <button class="btn" onclick="showMain()">Главная 📌</button>
-            <button class="btn" onclick="showRecommended()">Рекомендуемые товары 😊</button>
-            <button class="btn" onclick="showNewProducts()">Новые товары 🆕</button>
-            <button class="btn" onclick="showSaleProducts()">Товары со скидкой 🏷️</button>
-            <button class="btn" onclick="showPopularProducts()">Популярные товары 🔥</button>
-            <button class="btn" onclick="showCartSection()">Корзина 🛒</button>
-        </div>
-        <div class="social-media">
-            <a href="https://www.facebook.com" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
-            <a href="https://www.instagram.com/____no_name____.__?igsh=aGJpOW83MmZoZ21o&utm_source=qr" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
-            <a href="https://t.me/+jav7eB_a5rc4NjZi" target="_blank" class="telegram"><i class="fab fa-telegram"></i></a>
-            <a href="https://wa.me/+79964684744" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
-            <a href="https://vk.com/id756665575" target="_blank" class="vk"><i class="fab fa-vk"></i></a>
-            <a href="https://youtube.com/channel/UCbKThWSdaYNLMaPmdK4XyyA?si=cmyDMGcOSjckE7cw" target="_blank" class="youtube"><i class="fab fa-youtube"></i></a>
-        </div>
-        <button class="theme-toggle" onclick="toggleTheme()"></button>
     </header>
     <main>
         <section class="gallery" id="product-gallery">
             <!-- Продукты будут добавлены здесь через JavaScript -->
-        </section>
-        <section class="recommended" id="recommended-gallery" style="display: none;">
-            <h2>Рекомендуемые товары</h2>
-            <div class="gallery" id="recommended-products">
-                <!-- Рекомендуемые продукты будут добавлены здесь через JavaScript -->
-            </div>
-        </section>
-        <section class="new-products" id="new-products-gallery" style="display: none;">
-            <h2>Новые товары</h2>
-            <div class="gallery" id="new-products">
-                <!-- Новые продукты будут добавлены здесь через JavaScript -->
-            </div>
-        </section>
-        <section class="sale-products" id="sale-products-gallery" style="display: none;">
-            <h2>Товары со скидкой</h2>
-            <div class="gallery" id="sale-products">
-                <!-- Товары со скидкой будут добавлены здесь через JavaScript -->
-            </div>
-        </section>
-        <section class="popular-products" id="popular-products-gallery" style="display: none;">
-            <h2>Популярные товары</h2>
-            <div class="gallery" id="popular-products">
-                <!-- Популярные продукты будут добавлены здесь через JavaScript -->
-            </div>
-        </section>
-        <section class="cart" id="cart-section" style="display: none;">
-            <h2>Корзина 🛒</h2>
-            <div id="cart-items"></div>
-            <button class="btn" onclick="checkout()">Оформить заказ</button>
+            <div class="product-card">Product 1</div>
+            <div class="product-card">Product 2</div>
+            <div class="product-card">Product 3</div>
         </section>
     </main>
-    <!-- Модальное окно -->
-    <div id="productModal" class="modal">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <h2 id="modalProductName"></h2>
-            <div id="modalProductImages" class="image-slider"></div>
-            <div class="image-count"></div>
-            <p id="modalProductPrice"></p>
-            <div>
-                <button class="btn" onclick="decreaseQuantity()">-</button>
-                <span id="modalProductQuantity">1</span>
-                <button class="btn" onclick="increaseQuantity()">+</button>
-            </div>
-            <button class="btn" onclick="addToCartFromModal()">в корзину 🛒</button>
-            <h3>Отзывы:</h3>
-            <div id="modalProductReviews"></div>
-            <button class="btn" onclick="openTelegramChat()"> Открыть чат💬</button>
-        </div>
-    </div>
-    <!-- Полноэкранный режим -->
-    <div id="fullscreen" class="fullscreen">
-        <span class="close-fullscreen" onclick="closeFullscreen()">&times;</span>
-        <div id="fullscreenImages" class="fullscreen-images"></div>
-        <div class="image-count"></div>
-    </div>
-    <!-- Чаты -->
-    <div id="chatContainer" class="chat-container">
-        <div class="chat-header">
-            <span class="close" onclick="closeChat()">&times;</span>
-            <h3>Чат 💬</h3>
-        </div>
-        <div class="chat-messages" id="chatMessages"></div>
-        <input type="text" id="chatInput" class="chat-input" placeholder="Напишите сообщение..." onkeypress="sendMessage(event)">
-    </div>
     <!-- Навигационные кнопки внизу экрана -->
     <div class="bottom-nav" id="bottom-nav">
-        <button class="btn" onclick="showMain()">Главная 📌</button>
-        <button class="btn" onclick="showRecommended()">Рекомендуемые товары 😊</button>
-        <button class="btn" onclick="showNewProducts()">Новые товары 🆕</button>
-        <button class="btn" onclick="showSaleProducts()">Товары со скидкой 🏷️</button>
-        <button class="btn" onclick="showPopularProducts()">Популярные товары 🔥</button>
-        <button class="btn" onclick="showCartSection()">Корзина 🛒</button>
+        <button class="btn" onclick="alert('Main')">Главная 📌</button>
+        <button class="btn" onclick="alert('Recommended')">Рекомендуемые товары 😊</button>
+        <button class="btn" onclick="alert('New')">Новые товары 🆕</button>
+        <button class="btn" onclick="alert('Sale')">Товары со скидкой 🏷️</button>
+        <button class="btn" onclick="alert('Popular')">Популярные товары 🔥</button>
+        <button class="btn" onclick="alert('Cart')">Корзина 🛒</button>
     </div>
-    <script src="scripts.js"></script>
 </body>
 </html>
