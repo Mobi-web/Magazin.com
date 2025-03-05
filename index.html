@@ -99,6 +99,15 @@
         <div class="chat-messages" id="chatMessages"></div>
         <input type="text" id="chatInput" class="chat-input" placeholder="Напишите сообщение..." onkeypress="sendMessage(event)">
     </div>
+    <!-- Навигационные кнопки внизу экрана -->
+    <div class="bottom-nav" id="bottom-nav">
+        <button class="btn" onclick="showMain()">Главная 📌</button>
+        <button class="btn" onclick="showRecommended()">Рекомендуемые товары 😊</button>
+        <button class="btn" onclick="showNewProducts()">Новые товары 🆕</button>
+        <button class="btn" onclick="showSaleProducts()">Товары со скидкой 🏷️</button>
+        <button class="btn" onclick="showPopularProducts()">Популярные товары 🔥</button>
+        <button class="btn" onclick="showCartSection()">Корзина 🛒</button>
+    </div>
     <script src="scripts.js"></script>
 </body>
 </html>
