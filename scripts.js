@@ -428,13 +428,6 @@ function loadChatMessages() {
     const chatMessagesDiv = document.getElementById("chatMessages");
     chatMessagesDiv.innerHTML = chatMessages.map(message => `<div class="chat-message">${message}</div>`).join('');
 }
-window.addEventListener('scroll', function() {
-    const bottomNav = document.getElementById('bottom-nav');
-    if (window.scrollY > 100) {
-        bottomNav.classList.add('visible');
-    } else {
-        bottomNav.classList.remove('visible');
-    }
 
 function sendMessage(event) {
     if (event.key === 'Enter') {
@@ -444,7 +437,6 @@ function sendMessage(event) {
             loadChatMessages();
             document.getElementById('chatInput').value = '';
         }
-        
     }
 }
 
