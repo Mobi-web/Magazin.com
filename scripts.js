@@ -279,7 +279,7 @@ function checkout() {
     if (cart.length > 0) {
         const cartItems = cart.map(item => `${item.name} - ${item.price}₽ x ${item.quantity} %0AИзображение: ${item.image}`).join('%0A');
         const message = `Я хочу заказать:%0A${cartItems}`;
-        window.open(`https://wa.me/+79964684744?text=${encodeURIComponent(message)}`, '_blank');
+        window.open(`https://t.me/+79964684744?text=${encodeURIComponent(message)}`, '_blank');
     } else {
         alert('Ваша корзина пуста');
     }
