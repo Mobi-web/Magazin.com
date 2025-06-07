@@ -160,7 +160,7 @@ function openModalFromCart(index) {
 
 function orderNow(name, image) {
     const message = `Я хочу заказать ${name} %0AИзображение: ${image}`;
-    window.open(`https://wa.me/+79964684744?text=${encodeURIComponent(message)}`, '_blank');
+    window.open(`https://t.me/+79964684744?text=${encodeURIComponent(message)}`, '_blank');
 }
 
 function addToCart(name, price, image, quantity = 1) {
