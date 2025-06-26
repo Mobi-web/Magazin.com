@@ -116,7 +116,15 @@
     </div>
 
     <button class="theme-toggle" onclick="toggleTheme()"></button>
-   
+     
+    <div id="chatContainer" class="chat-container">
+        <div class="chat-header">
+            <span class="close" onclick="closeChat()">&times;</span>
+            <h3>Чат поддержка 💬</h3>
+        </div>
+        <div class="chat-messages" id="chatMessages"></div>
+        <input type="text" id="chatInput" class="chat-input" placeholder="Напишите сообщение..." onkeypress="sendMessage(event)">
+    </div>
 
     <script src="scripts.js"></script>
 </body>
