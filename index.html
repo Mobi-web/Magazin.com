@@ -125,38 +125,6 @@
     <button class="nav-button" id="chatButton" type="button">💬</button>
 </footer>
 
-<script>
-    document.getElementById('chatButton').addEventListener('click', function() {
-        const chat = document.getElementById('supportChat');
-        chat.style.display = chat.style.display === 'none' ? 'block' : 'none';
-    });
-
-    document.getElementById('closeChat').addEventListener('click', function() {
-        document.getElementById('supportChat').style.display = 'none';
-    });
-
-    document.getElementById('sendMessage').addEventListener('click', function() {
-        const input = document.getElementById('chatInput');
-        const message = input.value.trim();
-        if (message) {
-            const chatMessages = document.getElementById('chatMessages');
-            const newMessage = document.createElement('div');
-            newMessage.className = 'message';
-            newMessage.textContent = message;
-            chatMessages.appendChild(newMessage);
-            input.value = '';
-            chatMessages.scrollTop = chatMessages.scrollHeight; // Прокрутка вниз
-        }
-    });
-
-    // Отправка сообщения по нажатию клавиши Enter
-    document.getElementById('chatInput').addEventListener('keypress', function(e) {
-        if (e.key === 'Enter') {
-            document.getElementById('sendMessage').click();
-        }
-    });
-</script>
-
     <div class="social-media">
         <a href="https://mobi-web.github.io/Mobios.ru/" class="Mobi-web"></i></a>
         <a href="https://instagram.com" class="instagram" target="_blank"><i class="fab fa-instagram"></i></a>
